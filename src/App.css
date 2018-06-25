@@ -1,17 +1,10 @@
 .App {
-  text-align: center;
+  margin: 20px;
+  text-align: left;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Employer {
+  line-height: 0%;
 }
 
 .App-title {
@@ -22,7 +15,37 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#experience-title {
+  /* padding: 15px;
+  background-color: #d95240; */
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "experience"
+    "projects"
+    "education"
+}
+
+@media only screen and (min-width: 600px) {
+  .body {
+    grid-template-columns: 1fr 50px 1fr;
+    grid-template-areas:
+      "experience . projects"
+      "experience . education";
+  }
+}
+
+.Work-experience {
+  grid-area: experience;
+}
+
+.Projects {
+  grid-area: projects;
+}
+
+.Education {
+  grid-area: education;
 }
